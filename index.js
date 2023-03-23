@@ -12,18 +12,16 @@ app.whenReady().then(() => {
 
   tray = new Tray(path.join(`${__dirname}/battery.png`))
   const contextMenu = Menu.buildFromTemplate([
+    {label: "Battery Charge Limiter"},
+    {type: 'separator'},
     {
-      label: `Enable Conservation Mode${
-        conservationModeActive ? ' (Active)' : ''
-      }`,
+      label: `Enable Conservation Mode ${conservationModeActive ? ' 🟢' : ''}`,
       click: () => {
         enableConservationMode()
       },
     },
     {
-      label: `Disable Conservation Mode${
-        !conservationModeActive ? ' (Active)' : ''
-      }`,
+      label: `Disable Conservation Mode ${!conservationModeActive ? ' 🟢' : ''}`,
       click: () => {
         disableConservationMode()
       },
@@ -95,17 +93,13 @@ function disableConservationMode() {
 function updateTrayMenu() {
   const contextMenu = Menu.buildFromTemplate([
     {
-      label: `Enable Conversation Mode${
-        conservationModeActive ? ' (Active)' : ''
-      }`,
+      label: `Enable Conversation Mode ${conservationModeActive ? ' 🟢' : ''}`,
       click: () => {
         enableConservationMode()
       },
     },
     {
-      label: `Disable Conversation Mode${
-        !conservationModeActive ? ' (Active)' : ''
-      }`,
+      label: `Disable Conversation Mode ${!conservationModeActive ? ' 🟢' : ''}`,
       click: () => {
         disableConservationMode()
       },
