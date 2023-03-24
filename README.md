@@ -30,4 +30,4 @@ sudo dpkg -i lenovo-acpi_x.x.x_amd64.deb
 ```
 
 ## LICENSE
-MIT!
+MIT
