@@ -28,6 +28,3 @@ cd out/make/deb/x64
 ```bash
 sudo dpkg -i lenovo-acpi_x.x.x_amd64.deb
 ```
-
-## LICENSE
-MIT
